@@ -1,22 +1,23 @@
-def add(a,b):
-    return a + b
+def add(number1,number2):
+    return number1 + number2
 
-def subtract(a,b):
-    return a - b
+def subtract(number1,number2):
+    return number1 - number2
 
-def multiply(a,b):
-    return a * b    
+def multiply(number1,number2):
+    return number1 * number2    
 
-def divide(a,b):
-    if b == 0:
-        print("Error: Division by zero is not allowed.")
-    return a / b
+def divide(number1,number2):
+    try:
+        return number1 / number2
+    except ZeroDivisionError:
+        return "Error: Division by zero is not allowed."
 
 print("Enter first number:")
-a = float(input())
+number1 = float(input())
 
 print("Enter second number:")
-b = float(input())
+number2 = float(input())
 
 print("Select operation:")
 print("1. Add")
@@ -24,20 +25,21 @@ print("2. Subtract")
 print("3. Multiply")
 print("4. Divide")
 
-print("Enter a choice: ")
-choice = float(input())
+while True:
+    print("Enter a choice: ")
+    choice = float(input())
 
-if choice == 1:
-    print(f"{a} + {b} = {add(a,b)}")
+    if choice == 1:
+        print(f"{number1} + {number2} = {add(number1,number2)}")
 
-elif choice == 2:
-    print(f"{a} - {b} = {add(a,b)}")
+    elif choice == 2:
+        print(f"{number1} - {number2} = {subtract(number1,number2)}")
 
-elif choice == 3:
-    print(f"{a} * {b} = {add(a,b)}")
+    elif choice == 3:
+        print(f"{number1} * {number2} = {multiply(number1,number2)}")
 
-elif choice == 4:
-    print(f"{a} / {b} = {add(a,b)}")
+    elif choice == 4:
+        print(f"{number1} / {number2} = {divide(number1,number2)}")
 
-else:
-    print("Invalid choice.")
+    else:
+        print("Invalid choice.")
