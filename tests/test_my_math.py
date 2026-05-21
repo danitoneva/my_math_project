@@ -69,5 +69,9 @@ class TestMyMath(unittest.TestCase):
         actual_result = MathModule.divide_two_numbers(number1 = 6, number2 = -2)
         self.assertEqual(expected_result, actual_result)
 
+    def test_division_by_zero(self):
+        with self.assertRaises(ZeroDivisionError):
+            MathModule.divide_two_numbers(10, 0)
+
 if __name__ == '__main__':
    unittest.main()
