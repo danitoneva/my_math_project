@@ -24,7 +24,7 @@ class MathModule:
 
         :parameter number1: first number
         :parameter number2: second number
-        :return: sum of two numbers
+        :return: subtract of two numbers
         """
         return number1 - number2
 
@@ -34,19 +34,19 @@ class MathModule:
 
         :parameter number1: first number
         :parameter number2: second number
-        :return: sum of two numbers
+        :return: multiply of two numbers
         """
         return number1 * number2    
 
-    def divide_two_numbers(number1: int,number2: int) -> int:
+    def divide_two_numbers(number1: float,number2: float) -> float:
         """
         Divides two numbers
 
         :parameter number1: first number
         :parameter number2: second number
-        :return: sum of two numbers
+        :return: divide of two numbers
         """
         try:
             return number1 / number2
         except ZeroDivisionError:
-            return "Error: Division by zero is not allowed."
+            raise ZeroDivisionError("Error: Division by zero is not allowed.")
