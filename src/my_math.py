@@ -18,7 +18,7 @@ class MathModule:
         """
         return number1 + number2
 
-    def subtract(number1: int,number2: int) -> int:
+    def subtract_two_numbers(number1: int,number2: int) -> int:
         """
         Subtracts two numbers
 
@@ -28,7 +28,7 @@ class MathModule:
         """
         return number1 - number2
 
-    def multiply(number1: int,number2: int) -> int:
+    def multiply_two_numbers(number1: int,number2: int) -> int:
         """
         Multiplies two numbers
 
@@ -38,7 +38,7 @@ class MathModule:
         """
         return number1 * number2    
 
-    def divide(number1: int,number2: int) -> int:
+    def divide_two_numbers(number1: int,number2: int) -> int:
         """
         Divides two numbers
 
@@ -50,4 +50,3 @@ class MathModule:
             return number1 / number2
         except ZeroDivisionError:
             return "Error: Division by zero is not allowed."
-
