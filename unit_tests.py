@@ -1,5 +1,6 @@
 import unittest
-import my_math
+import src.my_math as my_math
+
 class TestCalculator(unittest.TestCase):
     def test_add(self):
         self.assertEqual(my_math.add(1, 2), 3)
