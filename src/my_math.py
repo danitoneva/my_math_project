@@ -18,6 +18,7 @@ class MathModule:
         """
         return number1 + number2
 
+    @staticmethod
     def subtract_two_numbers(number1: int,number2: int) -> int:
         """
         Subtracts two numbers
@@ -28,6 +29,7 @@ class MathModule:
         """
         return number1 - number2
 
+    @staticmethod
     def multiply_two_numbers(number1: int,number2: int) -> int:
         """
         Multiplies two numbers
@@ -38,6 +40,7 @@ class MathModule:
         """
         return number1 * number2    
 
+    @staticmethod
     def divide_two_numbers(number1: float,number2: float) -> float:
         """
         Divides two numbers
@@ -48,5 +51,5 @@ class MathModule:
         """
         try:
             return number1 / number2
-        except ZeroDivisionError:
-            raise ZeroDivisionError("Error: Division by zero is not allowed.")
+        except ZeroDivisionError as e:
+            raise ZeroDivisionError("Error: Division by zero is not allowed.") from e
